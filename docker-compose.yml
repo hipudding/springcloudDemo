@@ -1,0 +1,25 @@
+version: '3'
+services:
+  eureka:
+    image: hipudding/eureka
+    restart: always
+    ports:
+      - 8761:8761
+
+#  eureka_client:
+#    image: hipudding/eureka_client
+#    restart: always
+#    ports:
+#      - 8763:8763
+
+  hi-service:
+    image: hipudding/hi-service
+    restart: always
+    ports:
+      - 8764:8764
+
+  hi-client:
+    image: hipudding/hi-client
+    restart: always
+    ports:
+      - 8765:8765
